@@ -25,7 +25,7 @@ const HeroSection = () => {
           alt="Professional NetSuite consulting team" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50"></div>
+        <div className="absolute inset-0 bg-background/90"></div>
       </div>
 
       {/* Hero Content */}
@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToContact}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold shadow-hero transition-smooth"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-medium transition-smooth"
             >
               Get Started
             </Button>
@@ -56,7 +56,7 @@ const HeroSection = () => {
               onClick={scrollToServices}
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg font-semibold transition-smooth"
+              className="border-border text-foreground hover:bg-accent px-8 py-3 text-lg font-medium transition-smooth"
             >
               Our Services
             </Button>

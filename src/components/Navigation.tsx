@@ -23,31 +23,31 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
       isScrolled 
-        ? 'bg-background/95 backdrop-blur-sm border-b border-border shadow-professional' 
+        ? 'bg-background/95 backdrop-blur-sm border-b border-border' 
         : 'bg-transparent'
     }`}>
       <div className="container-width section-padding">
         <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-primary">
+          <div className="text-xl font-light text-foreground">
             Tharayil-Babu
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-smooth font-medium"
+              className="text-muted-foreground hover:text-foreground transition-smooth font-light"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-smooth font-medium"
+              className="text-muted-foreground hover:text-foreground transition-smooth font-light"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-smooth font-medium"
+              className="text-muted-foreground hover:text-foreground transition-smooth font-light"
             >
               About Us
             </button>

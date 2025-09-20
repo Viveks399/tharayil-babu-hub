@@ -81,19 +81,19 @@ const ContactSection = () => {
     <section id="contact" className="py-20 section-gradient">
       <div className="container-width section-padding">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
             Contact Us
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <div className="w-12 h-px bg-border mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your NetSuite experience? Get in touch with our experts today.
           </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <Card className="shadow-professional card-gradient border-border">
+          <Card className="shadow-card bg-card border-border">
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-center text-foreground">
+              <CardTitle className="text-2xl font-light text-center text-foreground">
                 Get Started Today
               </CardTitle>
             </CardHeader>
@@ -166,7 +166,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 text-lg transition-smooth"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 text-lg transition-smooth"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
