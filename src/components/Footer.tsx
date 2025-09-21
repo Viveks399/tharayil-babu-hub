@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/70">
-            Tharayil-Babu. All rights reserved.
+            © Tharayil-Babu. All rights reserved.
           </p>
         </div>
       </div>
