@@ -6,26 +6,14 @@
   Content-Type: text/css
   X-Content-Type-Options: nosniff
 
-/*.png
+/assets/*.png
   Content-Type: image/png
 
-/*.jpg
+/assets/*.jpg
   Content-Type: image/jpeg
 
-/*.svg
-  Content-Type: image/svg+xml
-
-/*.ico
-  Content-Type: image/x-icon
-
-/*.woff2
+/assets/*.woff2
   Content-Type: font/woff2
 
-/*.woff
+/assets/*.woff
   Content-Type: font/woff
-
-/*.ttf
-  Content-Type: font/ttf
-
-/*.eot
-  Content-Type: application/vnd.ms-fontobject
