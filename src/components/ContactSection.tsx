@@ -117,6 +117,17 @@ const ContactSection = () => {
             Ready to transform your NetSuite experience? Get in touch with our
             experts today.
           </p>
+          <div className="mt-6">
+            <p className="text-sm text-muted-foreground mb-1">
+              Prefer to call directly?
+            </p>
+            <a
+              href="tel:+32479136440"
+              className="text-lg text-muted-foreground hover:text-primary transition-colors"
+            >
+              +32 479 13 6440
+            </a>
+          </div>
         </div>
 
         <div className="max-w-2xl mx-auto">
