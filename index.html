@@ -10,54 +10,137 @@
     />
     <meta name="author" content="Lovable" />
 
-    <!-- Favicon -->
+    <!-- Favicon with dark/light mode support -->
     <link
       rel="icon"
       type="image/x-icon"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-16"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-32"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="48x48"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-48"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="64x64"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-64"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="96x96"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-96"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
       href="/src/assets/bg-white-favicon.png"
+      id="favicon-192"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="/src/assets/bg-white-favicon.png"
+      id="apple-touch-icon"
     />
-    <link rel="shortcut icon" href="/src/assets/bg-white-favicon.png" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/bg-white-favicon.png"
+      id="shortcut-icon"
+    />
+
+    <!-- CSS for dark mode favicon switching -->
+    <style>
+      /* Light mode favicon (default) */
+      #favicon,
+      #favicon-16,
+      #favicon-32,
+      #favicon-48,
+      #favicon-64,
+      #favicon-96,
+      #favicon-192,
+      #apple-touch-icon,
+      #shortcut-icon {
+        content: url("/src/assets/logo-white.png");
+      }
+
+      /* Dark mode favicon */
+      @media (prefers-color-scheme: dark) {
+        #favicon,
+        #favicon-16,
+        #favicon-32,
+        #favicon-48,
+        #favicon-64,
+        #favicon-96,
+        #favicon-192,
+        #apple-touch-icon,
+        #shortcut-icon {
+          content: url("/src/assets/bg-white-favicon.png");
+        }
+      }
+    </style>
+
+    <!-- JavaScript for dynamic favicon switching -->
+    <script>
+      function updateFavicon() {
+        const isDarkMode = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const faviconPath = isDarkMode
+          ? "/src/assets/bg-white-favicon.png"
+          : "/src/assets/logo-white.png";
+
+        // Update all favicon elements
+        const faviconElements = [
+          "favicon",
+          "favicon-16",
+          "favicon-32",
+          "favicon-48",
+          "favicon-64",
+          "favicon-96",
+          "favicon-192",
+          "apple-touch-icon",
+          "shortcut-icon",
+        ];
+
+        faviconElements.forEach((id) => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.href = faviconPath;
+          }
+        });
+      }
+
+      // Update favicon on page load
+      document.addEventListener("DOMContentLoaded", updateFavicon);
+
+      // Listen for changes in color scheme preference
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateFavicon);
+    </script>
 
     <meta
       property="og:title"
